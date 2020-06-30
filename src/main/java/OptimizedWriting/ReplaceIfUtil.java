@@ -16,7 +16,7 @@ public class ReplaceIfUtil {
      */
     private Class aclass;
 
-    public ReplaceIfUtil(HashMap<String, Method> methodMap, Class<ReplaceIfTest> aclass) {
+    public ReplaceIfUtil(HashMap<String, Method> methodMap, Class<ReplaceIfOptimize> aclass) {
         this.aclass = aclass;
         this.methodMap= methodMap;
     }

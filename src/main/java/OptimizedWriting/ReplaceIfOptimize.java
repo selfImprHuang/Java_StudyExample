@@ -7,7 +7,7 @@ import java.util.HashMap;
 /**
  * 通过不同的写法替代if else的使用
  */
-public class ReplaceIfTest {
+public class ReplaceIfOptimize {
 
 
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, InstantiationException, NoSuchMethodException {
@@ -21,10 +21,10 @@ public class ReplaceIfTest {
          //通过map的方式进行方法的反射处理:有点类似表驱动法
          //参考地址：https://blog.csdn.net/qq_36865969/article/details/80155776
         HashMap<String, Method> methodMap = new HashMap<>();
-        methodMap.put("A", ReplaceIfTest.class.getMethod("A"));
-        methodMap.put("B", ReplaceIfTest.class.getMethod("B"));
-        methodMap.put("C", ReplaceIfTest.class.getMethod("C"));
-        ReplaceIfUtil replaceIfUtil = new ReplaceIfUtil(methodMap,ReplaceIfTest.class);
+        methodMap.put("A", ReplaceIfOptimize.class.getMethod("A"));
+        methodMap.put("B", ReplaceIfOptimize.class.getMethod("B"));
+        methodMap.put("C", ReplaceIfOptimize.class.getMethod("C"));
+        ReplaceIfUtil replaceIfUtil = new ReplaceIfUtil(methodMap, ReplaceIfOptimize.class);
         mapInvoke("A",replaceIfUtil);
     }
 
